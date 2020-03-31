@@ -19,7 +19,7 @@ class CrocodileActivity : AppCompatActivity() {
         // Инициализируем массив строк
         words = resources.getStringArray(R.array.words).toCollection(ArrayList())
         // Вешаем слушателя на кнопку
-        crocodileTwWord.setOnClickListener {
+        crocodileBg.setOnClickListener {
             crocodileTwWord.text = getWord()
         }
 
