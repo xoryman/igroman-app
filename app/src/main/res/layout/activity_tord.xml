@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TordActivity"
+    android:background="@color/colorPrimary"
+    android:id="@+id/tordBg"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:textSize="16dp"
+        android:text="Вопросов: ?"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/twCount"
+        />
+
+    <TextView
+        android:id="@+id/tordTw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="24dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/truth_or_drink"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        />
+
+</FrameLayout>
