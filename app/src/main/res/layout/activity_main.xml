@@ -1,94 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimary"
-    android:layout_width="match_parent"
+    android:id="@+id/mainScrollView"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     >
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btnBg"
-        android:background="@drawable/roundedimage"
-        android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/appName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textColor="@color/colorWhite"
-        android:textSize="22dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo"
-        android:layout_marginTop="10dp"
-        />
-
-    <LinearLayout
-        android:id="@+id/btnBg"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@id/imgLogo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="20dp"
         >
 
-        <Button
-            android:id="@+id/btnTruthOrDrink"
+        <ImageView
+            android:id="@+id/mainAppLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedimage"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@string/app_name"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/mainAppName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/mainAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/pangolin_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainAppLogo"
+            />
+
+        <LinearLayout
+            android:id="@+id/mainGamesList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            android:text="@string/truth_or_drink"
-            android:textColor="@color/colorWhite" />
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainAppName"
+            >
 
-        <Button
-            android:id="@+id/btnINeverDoIt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            android:text="@string/i_never_do_it"
-            android:textColor="@color/colorWhite" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainGameDiv1"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_pink"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                >
 
-        <Button
-            android:id="@+id/btnCrocodile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            android:text="@string/crocodile"
-            android:textColor="@color/colorWhite" />
+                <TextView
+                    android:id="@+id/mainGameName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/truth_or_drink"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
-        <Button
-            android:id="@+id/btnMovie"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/roundedbutton"
-            android:text="@string/guess_movie"
-            android:textColor="@color/colorWhite" />
+                <TextView
+                    android:id="@+id/mainGameDesc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:text="@string/truth_or_drink_desc"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/mainGameName1"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName1"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameName1" />
+
+                <TextView
+                    android:id="@+id/mainGameCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0 вопросов"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc1"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName1"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainGameDiv2"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_blue"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/mainGameName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_never_do_it"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/mainGameDesc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:text="@string/i_never_do_it_desc"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/mainGameName2"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName2"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameName2" />
+
+                <TextView
+                    android:id="@+id/mainGameCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0 вопросов"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc2"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName2"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainGameDiv3"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_green"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/mainGameName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crocodile"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/mainGameDesc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:text="@string/crocodile_desc"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/mainGameName3"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName3"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameName3" />
+
+                <TextView
+                    android:id="@+id/mainGameCount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0 слов"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc3"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName3"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainGameDiv4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_gray"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/mainGameName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guess_movie"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/mainGameDesc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:text="@string/guess_movie_desc"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@id/mainGameName4"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName4"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameName4" />
+
+                <TextView
+                    android:id="@+id/mainGameCount4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0 карточек | Игра в разработке!"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc4"
+                    app:layout_constraintStart_toStartOf="@id/mainGameName4"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -5,4 +5,5 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
     <color name="colorButton">#009688</color>
+    <color name="colorButtonTransp">#24000000</color>
 </resources>

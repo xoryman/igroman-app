@@ -17,6 +17,7 @@
         android:textSize="16dp"
         android:text="Вопросов: ?"
         android:textColor="@color/colorWhite"
+        android:fontFamily="@font/pangolin_regular"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:id="@+id/twCount"
@@ -27,11 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="24dp"
+        android:textSize="26dp"
         android:paddingHorizontal="20dp"
         android:text="@string/truth_or_drink"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
+        android:fontFamily="@font/pangolin_regular"
         />
 
 </FrameLayout>

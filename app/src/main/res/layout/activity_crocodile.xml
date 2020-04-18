@@ -20,6 +20,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:text="@string/click_to_start"
+        android:fontFamily="@font/pangolin_regular"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
