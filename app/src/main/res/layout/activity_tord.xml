@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    tools:context=".TordActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TordActivity"
-    android:background="@color/colorPrimary"
     android:id="@+id/tordBg"
     >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:textSize="16dp"
-        android:text="Вопросов: ?"
-        android:textColor="@color/colorWhite"
-        android:fontFamily="@font/pangolin_regular"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/twCount"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16dp"
+            android:text="Вопросов: ?"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/pangolin_regular"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/twCount"
+            />
 
-    <TextView
-        android:id="@+id/tordTw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="26dp"
-        android:paddingHorizontal="20dp"
-        android:text="@string/truth_or_drink"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:fontFamily="@font/pangolin_regular"
-        />
+        <TextView
+            android:id="@+id/tordTw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/twCount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="24dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/truth_or_drink_desc"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/pangolin_regular"
+            />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

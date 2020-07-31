@@ -1,12 +1,10 @@
 package ru.meshari.igroman
 
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.util.Log
-import android.view.View
+import android.util.TypedValue
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_crocodile.*
-import java.sql.Time
 
 class CrocodileActivity : AppCompatActivity() {
 
@@ -20,6 +18,8 @@ class CrocodileActivity : AppCompatActivity() {
         words = resources.getStringArray(R.array.words).toCollection(ArrayList())
         // Вешаем слушателя на кнопку
         crocodileBg.setOnClickListener {
+            crocodileTwWord.gravity = Gravity.CENTER
+            crocodileTwWord.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30F)
             crocodileTwWord.text = getWord()
         }
 

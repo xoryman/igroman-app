@@ -1,6 +1,8 @@
 package ru.meshari.igroman
 
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_tord.*
 
@@ -17,6 +19,8 @@ class TordActivity : AppCompatActivity() {
 
         tordBg.setOnClickListener {
             tordTw.text = getQuestion()
+            tordTw.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26F)
+            tordTw.gravity = Gravity.CENTER
             twCount.text = "Вопросов: ${questions.size}"
         }
     }

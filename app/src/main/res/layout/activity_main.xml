@@ -58,10 +58,11 @@
             app:layout_constraintTop_toBottomOf="@id/mainAppName"
             >
 
+            <!-- Truth or drink -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mainGameDiv1"
+                android:id="@+id/truthDiv"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_pink"
                 android:paddingHorizontal="15dp"
@@ -70,7 +71,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/mainGameName1"
+                    android:id="@+id/truthName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/truth_or_drink"
@@ -82,37 +83,48 @@
                     />
 
                 <TextView
-                    android:id="@+id/mainGameDesc1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/truthPayers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pangolin_regular"
-                    android:text="@string/truth_or_drink_desc"
-                    android:textColor="@color/colorWhite"
+                    android:text="@string/player_count"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@id/mainGameName1"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName1"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameName1" />
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/truthName"
+                    />
 
                 <TextView
-                    android:id="@+id/mainGameCount1"
+                    android:id="@+id/truthCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="0 вопросов"
-                    android:textSize="14sp"
+                    android:text="@string/card_count"
+                    android:textSize="16sp"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/pangolin_regular"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc1"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName1"
+                    app:layout_constraintTop_toBottomOf="@id/truthPayers"
+                    app:layout_constraintStart_toStartOf="@id/truthName"
+                    />
+
+                <TextView
+                    android:id="@+id/truthAlco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alcohol"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/truthCount"
+                    app:layout_constraintStart_toStartOf="@id/truthName"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- I never do -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mainGameDiv2"
+                android:id="@+id/neverDiv"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_blue"
                 android:paddingHorizontal="15dp"
@@ -121,7 +133,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/mainGameName2"
+                    android:id="@+id/neverName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/i_never_do_it"
@@ -133,37 +145,110 @@
                     />
 
                 <TextView
-                    android:id="@+id/mainGameDesc2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/neverPayers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pangolin_regular"
-                    android:text="@string/i_never_do_it_desc"
-                    android:textColor="@color/colorWhite"
+                    android:text="@string/player_count"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@id/mainGameName2"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName2"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameName2" />
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/neverName"
+                    />
 
                 <TextView
-                    android:id="@+id/mainGameCount2"
+                    android:id="@+id/neverCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="0 вопросов"
-                    android:textSize="14sp"
+                    android:text="@string/card_count"
+                    android:textSize="16sp"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/pangolin_regular"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc2"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName2"
+                    app:layout_constraintTop_toBottomOf="@id/neverPayers"
+                    app:layout_constraintStart_toStartOf="@id/neverName"
+                    />
+
+                <TextView
+                    android:id="@+id/neverAlco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alcohol"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/neverCount"
+                    app:layout_constraintStart_toStartOf="@id/neverName"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Alias -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mainGameDiv3"
+                android:id="@+id/aliasDiv"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_yellow"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                >
+
+                <TextView
+                    android:id="@+id/aliasName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alias"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/aliasPayers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_count"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/aliasName"
+                    />
+
+                <TextView
+                    android:id="@+id/aliasCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_count"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/aliasPayers"
+                    app:layout_constraintStart_toStartOf="@id/aliasName"
+                    />
+
+                <TextView
+                    android:id="@+id/aliasAlco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alcohol"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/aliasCount"
+                    app:layout_constraintStart_toStartOf="@id/aliasName"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Crocodile -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/crocoDiv"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_green"
                 android:paddingHorizontal="15dp"
@@ -172,7 +257,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/mainGameName3"
+                    android:id="@+id/crocoName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/crocodile"
@@ -184,37 +269,48 @@
                     />
 
                 <TextView
-                    android:id="@+id/mainGameDesc3"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/crocoPayers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pangolin_regular"
-                    android:text="@string/crocodile_desc"
-                    android:textColor="@color/colorWhite"
+                    android:text="@string/player_count"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@id/mainGameName3"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName3"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameName3" />
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/crocoName"
+                    />
 
                 <TextView
-                    android:id="@+id/mainGameCount3"
+                    android:id="@+id/crocoCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="0 слов"
-                    android:textSize="14sp"
+                    android:text="@string/card_count"
+                    android:textSize="16sp"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/pangolin_regular"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc3"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName3"
+                    app:layout_constraintTop_toBottomOf="@id/crocoPayers"
+                    app:layout_constraintStart_toStartOf="@id/crocoName"
+                    />
+
+                <TextView
+                    android:id="@+id/crocoAlco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alcohol"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/crocoCount"
+                    app:layout_constraintStart_toStartOf="@id/crocoName"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Movie -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mainGameDiv4"
+                android:id="@+id/movieDiv"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btn_gray"
                 android:paddingHorizontal="15dp"
@@ -223,7 +319,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/mainGameName4"
+                    android:id="@+id/movieName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/guess_movie"
@@ -235,29 +331,39 @@
                     />
 
                 <TextView
-                    android:id="@+id/mainGameDesc4"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/moviePayers"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/pangolin_regular"
-                    android:text="@string/guess_movie_desc"
-                    android:textColor="@color/colorWhite"
+                    android:text="@string/player_count"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@id/mainGameName4"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName4"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameName4" />
+                    android:fontFamily="@font/pangolin_regular"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/movieName"
+                    />
 
                 <TextView
-                    android:id="@+id/mainGameCount4"
+                    android:id="@+id/movieCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="0 карточек | Игра в разработке!"
-                    android:textSize="14sp"
+                    android:text="@string/card_count"
+                    android:textSize="16sp"
                     android:textColor="@color/colorWhite"
                     android:fontFamily="@font/pangolin_regular"
-                    app:layout_constraintTop_toBottomOf="@id/mainGameDesc4"
-                    app:layout_constraintStart_toStartOf="@id/mainGameName4"
+                    app:layout_constraintTop_toBottomOf="@id/moviePayers"
+                    app:layout_constraintStart_toStartOf="@id/movieName"
+                    />
+
+                <TextView
+                    android:id="@+id/movieAlco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alcohol"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/pangolin_regular"
+                    app:layout_constraintTop_toBottomOf="@id/movieCount"
+                    app:layout_constraintStart_toStartOf="@id/movieName"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

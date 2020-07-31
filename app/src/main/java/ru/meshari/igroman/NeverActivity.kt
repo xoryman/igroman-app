@@ -1,6 +1,8 @@
 package ru.meshari.igroman
 
 import android.os.Bundle
+import android.view.Gravity
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_never.*
 
@@ -17,6 +19,8 @@ class NeverActivity : AppCompatActivity() {
 
         neverBg.setOnClickListener {
             neverTwChange.text = getString()
+            neverTwChange.gravity = Gravity.CENTER
+            neverTw.visibility = View.VISIBLE
         }
     }
 

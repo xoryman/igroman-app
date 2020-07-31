@@ -12,27 +12,48 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainGameCount1.text = "Вопросов: " + resources.getStringArray(R.array.questions).size.toString()
-        mainGameCount2.text = "Вопросов: " + resources.getStringArray(R.array.strings).size.toString()
-        mainGameCount3.text = "Слов: " + resources.getStringArray(R.array.words).size.toString()
+        truthCount.text = resources.getString(R.string.card_count) + " " + resources.getStringArray(R.array.questions).size.toString()
+        truthPayers.text = resources.getString(R.string.player_count) + " 2+"
+        truthAlco.text = resources.getString(R.string.alcohol) + " да"
 
-        mainGameDiv1.setOnClickListener {
+        neverCount.text = resources.getString(R.string.card_count) + " " + resources.getStringArray(R.array.strings).size.toString()
+        neverPayers.text = resources.getString(R.string.player_count) + " 3+"
+        neverAlco.text = resources.getString(R.string.alcohol) + " да"
+
+        aliasCount.text = resources.getString(R.string.card_count) + " " + resources.getStringArray(R.array.words).size.toString()
+        aliasPayers.text = resources.getString(R.string.player_count) + " 4+"
+        aliasAlco.text = resources.getString(R.string.alcohol) + " нет"
+
+        crocoCount.text = resources.getString(R.string.card_count) + " " + resources.getStringArray(R.array.words).size.toString()
+        crocoPayers.text = resources.getString(R.string.player_count) + " 2+"
+        crocoAlco.text = resources.getString(R.string.alcohol) + " нет"
+
+        movieCount.text = resources.getString(R.string.card_count) + " 0"
+        moviePayers.text = resources.getString(R.string.player_count) + " 4+"
+        movieAlco.text = resources.getString(R.string.alcohol) + " нет"
+
+        truthDiv.setOnClickListener {
             val intent = Intent(this, TordActivity::class.java)
             startActivity(intent)
         }
 
-        mainGameDiv2.setOnClickListener {
+        neverDiv.setOnClickListener {
             val intent = Intent(this, NeverActivity::class.java)
             startActivity(intent)
         }
 
-        mainGameDiv3.setOnClickListener {
+        aliasDiv.setOnClickListener {
+            val intent = Intent(this, AliasActivity::class.java)
+            startActivity(intent)
+        }
+
+        crocoDiv.setOnClickListener {
             val intent = Intent(this, CrocodileActivity::class.java)
             startActivity(intent)
         }
 
-        mainGameDiv4.setOnClickListener {
-            Toast.makeText(this, "Игра еще в разработке", Toast.LENGTH_SHORT).show()
+        movieDiv.setOnClickListener {
+            Toast.makeText(this, "Игра еще в разработке", Toast.LENGTH_LONG).show()
         }
 
 

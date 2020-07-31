@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        >
-        <activity android:name=".CrocodileActivity"></activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AliasActivity"></activity>
+        <activity android:name=".CrocodileActivity" />
         <activity android:name=".NeverActivity" />
         <activity android:name=".TordActivity" />
         <activity android:name=".MainActivity">
